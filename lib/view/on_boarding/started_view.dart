@@ -13,52 +13,55 @@ class _StartedViewState extends State<StartedView> {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Tcolor.white,
+      backgroundColor: TColor.white,
       body: Container(
         width: media.width,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: Tcolor.primaryG,
-            begin: Alignment.topLeft, 
-            end: Alignment.bottomRight ),
-            ),
-         child: Stack(
+              colors: TColor.primaryG,
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight),
+        ),
+        child: Stack(
           alignment: Alignment.center,
           children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-
-            const Spacer(),
-            Text("Fitness", 
-            style: TextStyle(
-            color: Tcolor.black,
-            fontSize: 36, 
-            fontWeight: FontWeight.w700 ), ),
-
-             Text("Everybody Can Train", 
-            style: TextStyle(
-            color: Tcolor.gray,
-            fontSize: 18, 
-             ), ),
-             const Spacer(),
-
-
-             MaterialButton(onPressed: (){},
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-              textColor: Tcolor.primaryColor1,
-              minWidth: double.maxFinite,
-              color: Tcolor.white,
-              child: Text("Get Started", 
-              style: TextStyle(
-                color: Tcolor.gray,
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
-              ) ),)
-          ],)
-
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Spacer(),
+                Text(
+                  "Fitness",
+                  style: TextStyle(
+                      color: TColor.black,
+                      fontSize: 36,
+                      fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  "Everybody Can Train",
+                  style: TextStyle(
+                    color: TColor.gray,
+                    fontSize: 18,
+                  ),
+                ),
+                const Spacer(),
+                MaterialButton(
+                  onPressed: () {},
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25)),
+                  textColor: TColor.primaryColor1,
+                  minWidth: double.maxFinite,
+                  color: TColor.white,
+                  child: Text("Get Started",
+                      style: TextStyle(
+                        color: TColor.gray,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      )),
+                )
+              ],
+            )
           ],
-         ),   
+        ),
       ),
     );
   }
